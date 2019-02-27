@@ -1,0 +1,93 @@
+<template>
+  <div class="goals-new">
+  <!-- for whatever reason this keeps giving you a 404 error when you run it saying that goals/new isn't found. -->
+
+    <form v-on:submit.prevent="submit()">
+        <h1>New Goal</h1>
+        <ul>
+          <li class="text-danger" v-for="error in errors">{{ error }}</li>
+        </ul>
+        <div class="form-group">
+          <label>Goal Subject:</label> 
+          <input type="text" class="form-control" v-model="subject">
+        </div>
+        <div class="form-group">
+          <label>Goal:</label>
+          <input type="text" class="form-control" v-model="goal">
+        </div>
+        <div class="form-group">
+          <label>Frequency:</label>
+          <input type="text" class="form-control" v-model="frequency">
+        </div>
+        <div class="form-group">
+          <label>End Date</label>
+          <input type="text" class="form-control" v-model="end_date">
+        </div>
+        <div class="form-group">
+          <label>Active</label>
+          <input type="text" class="form-control" v-model="active">
+        </div>
+        <input type="Submit" class="btn btn-primary" value="Submit">
+      </form>
+  
+
+
+
+
+
+
+
+
+
+
+  
+  <router-link to='/goals'>See All My Goals</router-link><br>
+  
+  </div>
+  
+</template> -->
+
+
+
+<script>
+import axios from 'axios';
+
+export default {
+  data: function() {
+    return {
+      subject: "",
+      goal: "",
+      frequency: "",
+      end_date: "",
+      active: "",
+      errors: []
+     
+
+      
+      
+    };
+  },
+
+  methods: {
+    submit: function() {
+      var params = {
+        subject: this.subject,
+        goal: this.goal,
+        frequency: this.frequency,
+        end_date: this.end_date,
+        active: this.active,
+      };
+      axios
+        .post("/api/goals", params)
+        .then(response => {
+          console.log(response.data);
+          this.$router.push("/goals");
+        })
+        .catch(error => {
+          this.errors = error.response.data.errors;
+        });
+    },
+
+  }
+};
+</script>

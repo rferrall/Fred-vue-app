@@ -6,6 +6,9 @@ import Login from './views/Login.vue';
 import Logout from "./views/Logout.vue";
 import UsersShow from "./views/users/Show.vue";
 import UsersEdit from "./views/users/Edit.vue";
+import GoalsIndex from "./views/goals/Index.vue";
+import GoalsShow from "./views/goals/Show.vue";
+import GoalsNew from "./views/goals/New.vue";
 
 Vue.use(Router);
 
@@ -42,6 +45,21 @@ export default new Router({
       path: '/users/:id/edit',
       name: 'users-edit',
       component: UsersEdit
+    },
+    {
+      path: '/goals',
+      name: 'goals-index',
+      component: GoalsIndex
+    },
+    {
+      path: '/goals/:id',
+      name: 'goals-show',
+      component: GoalsShow
+    },
+    {
+      path: '/goals/new',
+      name: 'goals-new',
+      component: GoalsNew
     }
   ]
 });

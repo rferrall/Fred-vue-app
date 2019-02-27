@@ -5,6 +5,7 @@
       <router-link to="/signup">Sign Up</router-link> |
       <router-link to="/login">Log In</router-link> |
       <router-link to="/logout">Log Out</router-link> |
+      <router-link to="/users/:id">Profile</router-link> |
 
 
 

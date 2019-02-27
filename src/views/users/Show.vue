@@ -1,16 +1,17 @@
 <template>
   <div class="users-show">
-    <h1>{{ user.name }}</h1>
+    <h1>My Profile</h1>
+    <h2>{{ user.name }}</h2>
     <p>{{ user.email }}</p>
     <img :src="user.image" :alt="user.name">
     
 
 
-        <h2>My Goal: {{user.active_goal.subject}}</h2>
-  
-        <h3>{{user.active_goal.goal}}</h3>
-        <p>Contact me {{user.active_goal.frequency}} about it.</p>
-        <p>End Date: {{user.active_goal.end_date}}</p>
+    <h2>My Goal: {{user.active_goal.subject}}</h2>
+
+    <h3>{{user.active_goal.goal}}</h3>
+    <p>Contact me {{user.active_goal.frequency}} about it.</p>
+    <p>End Date: {{user.active_goal.end_date}}</p>
   
 
 
@@ -23,6 +24,7 @@
 
 
   <router-link v-bind:to="'/users/' + user.id + '/edit'">Edit My Info</router-link><br>
+  <router-link to='/goals'>See All My Goals</router-link><br>
   <button v-on:click="destroyUser()">Delete Account</button><br>
   </div>
   
@@ -54,6 +56,10 @@ export default {
       console.log(response.data);
       this.user = response.data;
     });
+    // .catch(error => {
+    //   this.errors = error.response.data.errors;
+    // });
+
   },
   methods: {
   //   submit: function() {

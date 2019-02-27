@@ -1,6 +1,6 @@
 <template>
   <div class="users-edit">
-    <h1> Hi {{ user.name }}</h1>
+    <h1> Hi {{ user.name }}!</h1>
     
     <img :src="user.image" :alt="user.name">
   <form v-on:submit.prevent="submit()">
