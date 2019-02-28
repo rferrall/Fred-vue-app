@@ -52,14 +52,15 @@ export default new Router({
       component: GoalsIndex
     },
     {
-      path: '/goals/:id',
-      name: 'goals-show',
-      component: GoalsShow
-    },
-    {
       path: '/goals/new',
       name: 'goals-new',
       component: GoalsNew
+    },
+    {
+      path: '/goals/:id',
+      name: 'goals-show',
+      component: GoalsShow
     }
+    
   ]
 });
