@@ -1,11 +1,18 @@
 <template>
   <div id="app">
     <div id="nav">
+      
+      <span v-if= "isLoggedIn()">
+      <router-link to="/users/:id">Profile</router-link> |
+      <router-link to="/conversations">My Conversations</router-link> |
+      <router-link to="/goals">My Goals</router-link> |
+      <router-link to="/logout">Log Out</router-link> |
+      </span>
+      <span v-else>
       <router-link to="/">Home</router-link> |
       <router-link to="/signup">Sign Up</router-link> |
       <router-link to="/login">Log In</router-link> |
-      <router-link to="/logout">Log Out</router-link> |
-      <router-link to="/users/:id">Profile</router-link> |
+      </span>
 
 
 
@@ -36,3 +43,35 @@
   color: #42b983;
 }
 </style>
+<script>
+import axios from 'axios';
+
+
+export default {
+  data: function() {
+    return {
+      user: {},
+      
+     
+
+      
+      
+    };
+  },
+  created: function() {
+    axios.get("/api/users/" + this.$route.params.id).then(response => {
+      console.log(response.data);
+      this.user = response.data;
+    });
+    // .catch(error => {
+    //   this.errors = error.response.data.errors;
+    // });
+
+  },
+  methods: {
+    isLoggedIn: function() {
+      return localStorage.getItem('jwt');
+    },
+  },
+};
+</script>

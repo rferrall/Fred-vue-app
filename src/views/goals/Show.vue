@@ -4,7 +4,7 @@
     
 
 
-    
+    <!-- needs a datepicker on the end_date -->
 
 
 
@@ -47,7 +47,7 @@
 
 
   
-  <router-link to='/goals'>See All My Goals</router-link><br>
+  <router-link to='/goals'>Back to Goals</router-link><br>
   <button v-on:click="destroyGoal()">Delete Goal</button><br>
   </div>
   

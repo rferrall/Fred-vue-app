@@ -1,7 +1,12 @@
 <template>
   <div class="goals-index">
     
-   
+   <div>
+     <h1>
+       Ready to start a conversation?
+     </h1>
+     <button v-on:click="createConversation()">Start</button><br>
+   </div>
 
 
 
@@ -13,14 +18,17 @@
         <p>This is my active goal: {{goal.active}}</p>
         <h4>{{goal.goal}}</h4>
         <p>I want my partner to check in with me {{goal.frequency}}</p>
-        <p>Stop the clock here: {{goal.end_date}}</p>
+        <p>Stop the clock here: {{relativeDate(goal.end_date)}}</p>
     
     </div>
     
 
 
-  <router-link v-bind:to="'/users/' + user.id">Back to my Profile</router-link><br>
+ 
   <router-link to='/goals/new'>Create a New Goal</router-link><br>
+
+
+
 
 
 
@@ -41,8 +49,10 @@
 
 <script>
 var axios = require("axios");
+var moment = require("moment");
 
 export default {
+
   data: function() {
     return {
       goals: [],
@@ -58,6 +68,18 @@ export default {
       this.goals = response.data;
     });
   },
-  methods: {}
+  methods: {
+    createConversation: function() {
+      axios
+        .post("/api/conversations/")
+        .then(response => {
+          console.log("convo created", response.data);
+          // this.$router.push("/");
+        });
+    },
+    relativeDate: function(date) {
+      return moment(date).format('L');
+    }
+  }
 };
 </script>

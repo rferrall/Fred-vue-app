@@ -1,6 +1,6 @@
 <template>
   <div class="goals-new">
-  <!-- for whatever reason this keeps giving you a 404 error when you run it saying that goals/new isn't found. -->
+ <!-- needs a datepicker on the end_date -->
 
     <form v-on:submit.prevent="submit()">
         <h1>New Goal</h1>
@@ -21,8 +21,9 @@
         </div>
         <div class="form-group">
           <label>End Date</label>
-          <input type="text" class="form-control" v-model="end_date">
+          <input type="text" class="form-control"  v-model="end_date">
         </div>
+        
         <div class="form-group">
           <label>Active</label>
           <input type="text" class="form-control" v-model="active">

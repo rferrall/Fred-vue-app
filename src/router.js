@@ -9,6 +9,8 @@ import UsersEdit from "./views/users/Edit.vue";
 import GoalsIndex from "./views/goals/Index.vue";
 import GoalsShow from "./views/goals/Show.vue";
 import GoalsNew from "./views/goals/New.vue";
+import ConversationsIndex from "./views/conversations/Index.vue";
+import ConversationsShow from "./views/conversations/Show.vue";
 
 Vue.use(Router);
 
@@ -60,6 +62,16 @@ export default new Router({
       path: '/goals/:id',
       name: 'goals-show',
       component: GoalsShow
+    },
+    {
+      path: '/conversations',
+      name: 'conversations-index',
+      component: ConversationsIndex
+    },
+    {
+      path: '/conversations/:id',
+      name: 'conversations-show',
+      component: ConversationsShow
     }
     
   ]

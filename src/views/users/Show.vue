@@ -1,17 +1,21 @@
 <template>
   <div class="users-show">
     <h1>My Profile</h1>
-    <h2>{{ user.name }}</h2>
+    <h2>Hi {{ user.name }}. Welcome to the neighborhood!</h2>
     <p>{{ user.email }}</p>
     <img :src="user.image" :alt="user.name">
     
 
-
+    
     <h2>My Goal: {{user.active_goal.subject}}</h2>
 
     <h3>{{user.active_goal.goal}}</h3>
     <p>Contact me {{user.active_goal.frequency}} about it.</p>
     <p>End Date: {{user.active_goal.end_date}}</p>
+    
+    <!-- need to write logic for if goal doesn't exist yet
+    <h3>Start a Goal!</h3> -->
+  
   
 
 
@@ -24,7 +28,12 @@
 
 
   <router-link v-bind:to="'/users/' + user.id + '/edit'">Edit My Info</router-link><br>
-  <router-link to='/goals'>See All My Goals</router-link><br>
+ 
+ 
+
+
+
+
   <button v-on:click="destroyUser()">Delete Account</button><br>
   </div>
   
@@ -39,6 +48,7 @@ img {
 
 <script>
 import axios from 'axios';
+import moment from 'moment';
 
 export default {
   data: function() {
@@ -62,30 +72,17 @@ export default {
 
   },
   methods: {
-  //   submit: function() {
-  //     var params = {
-  //       name: this.user.name,
-  //       email: this.user.email,
-  //       image: this.user.image
-  //     };
-  //     axios
-  //       .patch("/api/users/" + this.post.id, params)
-  //       .then(response => {
-  //         console.log(response.data);
-  //         $('#exampleModal').modal('hide');
-  //       })
-  //       .catch(error => {
-  //         this.errors = error.response.data.errors;
-  //       });
-  //   },
-      destroyUser: function() {
+    destroyUser: function() {
       axios
         .delete("/api/users/" + this.user.id)
         .then(response => {
           console.log("Sorry to see you go.", response.data);
           this.$router.push("/");
         });
-    }
+    },
+    relativeDate: function(date) {
+      return moment(date).format('L');
+    },
 
   }
 };
