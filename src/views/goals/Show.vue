@@ -31,7 +31,7 @@
         </div>
         <div class="form-group">
           <label>Active</label>
-          <input type="text" class="form-control" v-model="goal.active">
+          <input type="checkbox" class="form-control" v-model="goal.active" v-bind:true-value="true" v-bind:false-value="false">
         </div>
         <input type="Submit" class="btn btn-primary" value="Submit Changes">
       </form>

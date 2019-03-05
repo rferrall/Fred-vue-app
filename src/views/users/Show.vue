@@ -6,12 +6,18 @@
     <img :src="user.image" :alt="user.name">
     
 
-    
-    <h2>My Goal: {{user.active_goal.subject}}</h2>
+    <div v-if= user.active_goal>
+      <h2>My Goal: {{user.active_goal.subject}}</h2>
 
-    <h3>{{user.active_goal.goal}}</h3>
-    <p>Contact me {{user.active_goal.frequency}} about it.</p>
-    <p>End Date: {{user.active_goal.end_date}}</p>
+      <h3>{{user.active_goal.goal}}</h3>
+      <p>Contact me {{user.active_goal.frequency}} about it.</p>
+      <p>End Date: {{user.active_goal.end_date}}</p>
+    </div>
+    <div v-else>
+      
+      <router-link to='/goals/new'>Start a Goal</router-link><br>
+      
+    </div>
     
     <!-- need to write logic for if goal doesn't exist yet
     <h3>Start a Goal!</h3> -->

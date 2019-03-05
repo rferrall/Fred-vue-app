@@ -26,7 +26,7 @@
         
         <div class="form-group">
           <label>Active</label>
-          <input type="text" class="form-control" v-model="active">
+          <input type="text" class="form-control" placeholder="False">
         </div>
         <input type="Submit" class="btn btn-primary" value="Submit">
       </form>

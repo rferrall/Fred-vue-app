@@ -3,7 +3,7 @@
     
    <div>
      <h1>
-       Ready to start a conversation?
+       Ready to start a conversation about your active goal?
      </h1>
      <button v-on:click="createConversation()">Start</button><br>
    </div>
@@ -74,7 +74,10 @@ export default {
         .post("/api/conversations/")
         .then(response => {
           console.log("convo created", response.data);
-          // this.$router.push("/");
+          this.$router.push("/conversations");
+        })
+        .catch(error => {
+          this.errors = error.response.data.errors;
         });
     },
     relativeDate: function(date) {
