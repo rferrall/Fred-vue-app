@@ -33,6 +33,10 @@
           <label>Active</label>
           <input type="checkbox" class="form-control" v-model="goal.active" v-bind:true-value="true" v-bind:false-value="false">
         </div>
+       <!--  {{$parent.user}} -->
+        <div v-if="$parent.user.active_goal && goal.active">
+          You may only have ONE active goal. If you make this goal active then {{$parent.user.active_goal.subject}} will end.
+        </div>
         <input type="Submit" class="btn btn-primary" value="Submit Changes">
       </form>
   
@@ -87,11 +91,17 @@ export default {
         frequency: this.goal.frequency,
         end_date: this.goal.end_date,
         active: this.goal.active,
+        
       };
       axios
         .patch("/api/goals/" + this.goal.id, params)
         .then(response => {
           console.log(response.data);
+          if (response.data.active) {
+            this.$parent.user.active_goal = response.data;
+          } else {
+            delete this.$parent.user.active_goal;
+          }
           this.$router.push("/goals");
         })
         .catch(error => {

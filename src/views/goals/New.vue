@@ -23,11 +23,15 @@
           <label>End Date</label>
           <input type="text" class="form-control"  v-model="end_date">
         </div>
-        
         <div class="form-group">
           <label>Active</label>
-          <input type="text" class="form-control" placeholder="False">
+          <input type="checkbox" class="form-control" v-model="active" v-bind:true-value="true" v-bind:false-value="false">
         </div>
+        {{$parent.user}}
+        <div v-if="$parent.user.active_goal && active">
+          You may only have ONE active goal.
+        </div>
+    
         <input type="Submit" class="btn btn-primary" value="Submit">
       </form>
   
@@ -82,6 +86,9 @@ export default {
         .post("/api/goals", params)
         .then(response => {
           console.log(response.data);
+          if (response.data.active) {
+            this.$parent.user.active_goal = response.data;
+          }
           this.$router.push("/goals");
         })
         .catch(error => {

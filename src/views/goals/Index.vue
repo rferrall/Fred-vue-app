@@ -1,7 +1,7 @@
 <template>
   <div class="goals-index">
     
-   <div>
+   <div v-if="$parent.user.active_goal">
      <h1>
        Ready to start a conversation about your active goal?
      </h1>
