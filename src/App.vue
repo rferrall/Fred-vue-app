@@ -3,7 +3,7 @@
     <div id="nav">
       
       <span v-if= "isLoggedIn()">
-      <router-link to="/users/:id">Profile</router-link> |
+      <router-link to="/users/me">Profile</router-link> |
       <router-link to="/conversations">My Conversations</router-link> |
       <router-link to="/goals">My Goals</router-link> |
       <router-link to="/logout">Log Out</router-link> |
@@ -59,7 +59,7 @@ export default {
     };
   },
   created: function() {
-    axios.get("/api/users/" + this.$route.params.id).then(response => {
+    axios.get("/api/users/me").then(response => {
       console.log(response.data);
       this.user = response.data;
     });

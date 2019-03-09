@@ -27,15 +27,18 @@
         </div>
         <div class="form-group">
           <label>End Date</label>
-          <input type="text" class="form-control" v-model="goal.end_date">
+          <input type="date" class="form-control" v-model="goal.end_date">
         </div>
         <div class="form-group">
           <label>Active</label>
           <input type="checkbox" class="form-control" v-model="goal.active" v-bind:true-value="true" v-bind:false-value="false">
         </div>
        <!--  {{$parent.user}} -->
-        <div v-if="$parent.user.active_goal && goal.active">
+        <div v-if="goal.active && $parent.user.active_goal.id != this.goal.id  ">
           You may only have ONE active goal. If you make this goal active then {{$parent.user.active_goal.subject}} will end.
+        </div>
+        <div>
+          
         </div>
         <input type="Submit" class="btn btn-primary" value="Submit Changes">
       </form>
@@ -51,8 +54,10 @@
 
 
   
-  <router-link to='/goals'>Back to Goals</router-link><br>
-  <button v-on:click="destroyGoal()">Delete Goal</button><br>
+  
+  <h3> Done with this goal?
+    <button v-on:click="destroyGoal()">Delete Goal</button>
+  </h3>
   </div>
   
 </template> -->

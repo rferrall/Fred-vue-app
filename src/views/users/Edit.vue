@@ -9,7 +9,7 @@
           <li class="text-danger" v-for="error in errors">{{ error }}</li>
         </ul>
         <div class="form-group">
-          <label>Name:</label> 
+          <label>Call Me:</label> 
           <input type="text" class="form-control" v-model="user.name">
         </div>
         <div class="form-group">

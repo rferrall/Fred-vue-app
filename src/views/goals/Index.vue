@@ -1,12 +1,13 @@
 <template>
   <div class="goals-index">
     
-   <div v-if="$parent.user.active_goal">
-     <h1>
-       Ready to start a conversation about your active goal?
-     </h1>
-     <button v-on:click="createConversation()">Start</button><br>
-   </div>
+    <div>
+      <h3> <router-link to='/goals/new'>Create a New Goal</router-link> and make sure you set ONE goal to 'active'.<br> Once you do - we will match you up with a neighbor and the two of you will start your conversation.
+        
+      </h3>
+    </div>
+
+
 
 
 
@@ -25,9 +26,14 @@
 
 
  
-  <router-link to='/goals/new'>Create a New Goal</router-link><br>
+  
 
-
+    <div v-if="$parent.user.active_goal">
+      <h1>
+        Ready to start a conversation about your active goal?
+      </h1>
+      <button v-on:click="createConversation()">Start</button><br>
+    </div>
 
 
 

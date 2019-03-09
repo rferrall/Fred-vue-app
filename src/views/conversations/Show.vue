@@ -112,10 +112,7 @@ export default {
       console.log(response.data);
       this.conversation = response.data;
     });
-    // var convo_partner = conversations.recip
-    // .catch(error => {
-    //   this.errors = error.response.data.errors;
-    // });
+
 
   },
   methods: {

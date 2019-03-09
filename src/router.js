@@ -39,7 +39,7 @@ export default new Router({
       component: Logout
     },
     {
-      path: '/users/:id',
+      path: '/users/me',
       name: 'users-show',
       component: UsersShow
     },

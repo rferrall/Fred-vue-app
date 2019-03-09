@@ -12,7 +12,7 @@
           <input type="text" class="form-control" v-model="subject">
         </div>
         <div class="form-group">
-          <label>Goal:</label>
+          <label>I want to:</label>
           <input type="text" class="form-control" v-model="goal">
         </div>
         <div class="form-group">
@@ -21,13 +21,13 @@
         </div>
         <div class="form-group">
           <label>End Date</label>
-          <input type="text" class="form-control"  v-model="end_date">
+          <input type="date" class="form-control"  v-model="end_date">
         </div>
         <div class="form-group">
           <label>Active</label>
           <input type="checkbox" class="form-control" v-model="active" v-bind:true-value="true" v-bind:false-value="false">
         </div>
-        {{$parent.user}}
+        
         <div v-if="$parent.user.active_goal && active">
           You may only have ONE active goal.
         </div>
