@@ -1,7 +1,9 @@
 <template>
   <div class="conversations-index">
     
-
+  <span v-if="conversations.length > 0">
+    
+  
     <div v-for="conversation in conversations">
       <router-link v-bind:to="'/conversations/' + conversation.id">
         <h2>My Conversation with {{conversation.partner.name}}. . . </h2>
@@ -10,6 +12,19 @@
   
     
     </div>
+
+  </span>
+  <span v-else>
+    <h3>
+      Set up a goal on the Goals tab to get started with a new conversation.
+    </h3>
+    <h3>
+      Some things to think about as you're setting up your goal...
+    </h3>
+    <img src="https://i.pinimg.com/originals/01/9f/c8/019fc8eae63df340baa3ffa99d2bce09.png">
+
+
+  </span>
     
   
 

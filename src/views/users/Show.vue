@@ -1,11 +1,13 @@
 <template>
   <div class="users-show">
 
-   <!--  <div v-if=" passedDate(user.active_goal.end_date)">
-      <h1>Your Active Goal has ended. How'd you do? Ready to start a new goal?</h1>
-    </div> -->
+    <div v-if="!user.active_goal">
+      <h1>Your Active Goal has ended.</h1>
+      <h2>How'd you do? </h2>
+      <h2>Ready to start a new goal?</h2>
+    </div>
 
-    <div>
+    <div v-else>
       <h3>Clicking on <router-link to='/conversations'>My Conversations</router-link>  (here or in the Navigation) will take you to all of your conversations.</h3>
       <h3>Clicking on <router-link to='/goals'>My Goals</router-link>  (here or in the Navigation) will take you to all of your goals.</h3>
     </div>

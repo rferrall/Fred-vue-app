@@ -20,16 +20,16 @@
       <span v-else>
         <img :src="conversation.recipient.image" :alt="conversation.recipient.name">
       </span>
-      <h2>
-        They want to: 
-          <span v-if='$parent.user.id == conversation.recipient.id'>
-            {{conversation.sender.goal.goal}}
-          </span>
-          <span v-else>
-            {{conversation.recipient.goal.goal}}
-          </span>
+      <span v-if="conversation.sender.goal && conversation.recipient.goal">
+        <h2>
+          They want to: 
+            <span v-if='$parent.user.id == conversation.recipient.id'>
+              {{conversation.sender.goal.goal}}
+            </span>
+            <span v-else>
+              {{conversation.recipient.goal.goal}}
+            </span>
         </h2>
-
         <h2> 
           Contact them:
             <span v-if='$parent.user.id == conversation.recipient.id'>
@@ -46,6 +46,10 @@
               {{relativeDate(conversation.recipient.goal.end_date)}}
             </span>
         </h2>
+      </span>
+      <span v-else>
+        <h2> Continue the conversation. Check in.</h2>
+      </span>
 
       <div v-for="message in conversation.messages">
         <p>Sent By {{message.user}}</p>

@@ -32,6 +32,9 @@
       <h1>
         Ready to start a conversation about your active goal?
       </h1>
+     
+        <a v-for="error in errors">{{ error }}</a><br>
+      
       <button v-on:click="createConversation()">Start</button><br>
     </div>
 
@@ -62,7 +65,8 @@ export default {
   data: function() {
     return {
       goals: [],
-      user: {}
+      user: {},
+      errors: []
 
       
       
@@ -83,6 +87,7 @@ export default {
           this.$router.push("/conversations");
         })
         .catch(error => {
+          console.log(error.response.data.errors);
           this.errors = error.response.data.errors;
         });
     },
