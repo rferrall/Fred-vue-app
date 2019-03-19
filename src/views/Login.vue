@@ -1,7 +1,42 @@
 <template>
   <div class="login">
     <div class="container">
-      <form v-on:submit.prevent="submit()">
+
+  
+    <section class="module">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 m-auto">
+            <div class="up-logo">
+              <ul>
+                <li class="text-danger" v-for="error in errors">{{ error }}</li>
+              </ul>
+            </div>
+            <div class="up-form">
+              <h1>Log In</h1>
+              <form v-on:submit.prevent="submitLogin()">
+                <div class="form-group">
+                  <input class="form-control form-control-lg" type="email" placeholder="Email" v-model="email">
+                </div>
+                <div class="form-group">
+                  <input class="form-control form-control-lg" type="password" placeholder="Password" v-model="password">
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-block btn-lg btn-round btn-brand" type="submit">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+     <!--  <form v-on:submit.prevent="submitLogin()">
         <h1>Login</h1>
         <ul>
           <li class="text-danger" v-for="error in errors">{{ error }}</li>
@@ -15,7 +50,7 @@
           <input type="password" class="form-control" v-model="password">
         </div>
         <input type="submit" class="btn btn-primary" value="Submit">
-      </form>
+      </form> -->
     </div>
   </div>
 </template>
@@ -32,7 +67,7 @@ export default {
     };
   },
   methods: {
-    submit: function() {
+    submitLogin: function() {
       var params = {
         email: this.email,
         password: this.password
