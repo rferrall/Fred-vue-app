@@ -21,8 +21,9 @@
                       <!-- Column 1-->
                       <li class="menu-item-has-children mega-menu-col"><router-link to="/users/me">Profile Links</router-link>
                         <ul class="sub-menu">
-                          <li><router-link to="/goals">My Goals</router-link></li>
-                          <router-link to="/conversations">My Conversations</router-link>
+                          <li><router-link v-bind:to="'/users/' + user.id + '/edit'">Update Your Info</router-link></li>
+                          <li><router-link to="/goals">Your Goals</router-link></li>
+                          <router-link to="/conversations">Your Conversations</router-link>
                           <li><router-link to="/logout">Log Out</router-link></li>
                         </ul>
                       </li>
@@ -71,7 +72,7 @@
     <footer class="footer">
       <div class="container">
         <div class="row">
-            <div class="col-md-18">
+            <div class="col-md-12">
                 <div class="text-center"><span>If you are in a life threatening situation, do NOT use this site.<br>
                   Call the 24-hr National Suicide Prevention Lifeline at 1.800.273.8255.
                   Your call will be routed to the crisis center near you. <br>

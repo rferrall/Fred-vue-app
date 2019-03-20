@@ -30,7 +30,6 @@
                   <input type="password" class="form-control" v-model="passwordConfirmation">
                 </div>
                 <div><label>Pick an avatar:</label><br>
-
                   <input type="radio" v-model="image" value="https://images.pexels.com/photos/38012/pexels-photo-38012.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"> <img src="https://images.pexels.com/photos/38012/pexels-photo-38012.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""><br>
                   <input type="radio" v-model="image" value="https://images.pexels.com/photos/531767/pexels-photo-531767.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"> <img src="https://images.pexels.com/photos/531767/pexels-photo-531767.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""><br>
                   <input type="radio" v-model="image" value="https://images.pexels.com/photos/1083617/pexels-photo-1083617.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"> <img src="https://images.pexels.com/photos/1083617/pexels-photo-1083617.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
@@ -45,7 +44,7 @@
               </div>
               <h3>We're glad you're here.</h3>
               <p>The truth is that we could all use a little help sometimes. Do you have a goal in mind? Need to take better care of yourself? Striving to make a career change? Travel?</p>
-              <p> We want you to find a connection through Fred that will help you stay on track, stay motivated and to keep going. In turn, your help could be invaluable to someone else. We can all be each others' heroes.</p>
+              <p> We want you to find a connection through Fred that will help you to stay on track, to stay motivated and to take those next steps. In turn, your help could be invaluable to someone else. We can all be each others' heroes.</p>
               <blockquote>
                 <p>"We live in a world in which we need to share responsibility. It's easy to say, 'It's not my child, not my community, not my world, not my problem.' Then there are those who see the need and respond. I consider those people my heroes."</p>
                 <city>- Mr. Fred Rogers</city>
