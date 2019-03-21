@@ -35,7 +35,7 @@
                   <input type="radio" v-model="image" value="https://images.pexels.com/photos/1083617/pexels-photo-1083617.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"> <img src="https://images.pexels.com/photos/1083617/pexels-photo-1083617.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
                   <input type="radio" v-model="image" value="https://images.pexels.com/photos/386025/pexels-photo-386025.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"> <img src="https://images.pexels.com/photos/386025/pexels-photo-386025.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
                 </div>
-                <input type="submit" class="btn btn-primary" value="Submit">
+                <input type="submit" class="btn btn-block btn-lg btn-round btn-brand" value="Submit">
               </form>
             </div>
             <div class="col-md-6">

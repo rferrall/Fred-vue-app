@@ -1,18 +1,26 @@
 <template>
+
   <div class="users-show">
     <section class="module bg-gradient" v-if="!user.active_goal">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <div class="text-center">
-              <h3>Oh No! You're missing an active goal.</h3>
+              <h3>Oh no - you're missing an active goal.</h3>
               <h4>Did your goal end? How'd you do?</h4>
               <h4> Ready to start a new goal?</h4>
             </div>
           </div>
         </div>
       </div>
-
+    </section>
+    <section class="module bg-dark bg-gradient" v-else>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+          </div>
+        </div>
+      </div>
     </section>
       
 
@@ -114,10 +122,7 @@
 </template> -->
 
 <style>
-img {
-  width: 400px;
-  height: 450px;
-}
+
 </style>
 
 <script>

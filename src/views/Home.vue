@@ -1,3 +1,6 @@
+
+
+
 <template>
   <div class="home">
 
@@ -137,6 +140,7 @@ img {
 </style>
 
 <script>
+/* global $ */  
 import axios from "axios";
 
 export default {
@@ -159,6 +163,7 @@ export default {
           axios.defaults.headers.common["Authorization"] =
             "Bearer " + response.data.jwt;
           localStorage.setItem("jwt", response.data.jwt);
+          $("#modal-2").modal("hide");
           this.$router.push("/users/me");
         })
         .catch(error => {
