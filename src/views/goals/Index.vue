@@ -22,7 +22,7 @@
                 Ready to start a conversation about your active goal?
               </h1>
              
-                <p v-for="error in errors">{{ error }}</p>
+                <a v-for="error in errors">{{ error }}</a>
               
               <div class="m-b-10"><button class="btn btn-circle btn-brand" v-on:click="createConversation()">Start</button></div><br>
             </div>

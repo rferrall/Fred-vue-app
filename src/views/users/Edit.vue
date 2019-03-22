@@ -23,11 +23,15 @@
                   <label>Email:</label>
                   <input type="email" class="form-control" v-model="user.email">
                 </div>
+                <div class="form-group">
+                  <label>Telephone</label>
+                    <input class="form-control" type="tel" placeholder=" ex. +17635556123" v-model="user.phone_number">
+                </div>
                 <div class="container">
                   <div class="row">
                     <div class="col-md-2">
                       <div class="special-heading">
-                        <label>Pick an avatar:</label>
+                        <label>Pick a new avatar:</label>
                       </div>
                     <label class="custom-control custom-radio">
                     <input type="radio" v-model="image" value="https://images.pexels.com/photos/38012/pexels-photo-38012.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"> <img class="default-avatar" src="https://images.pexels.com/photos/38012/pexels-photo-38012.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""><br>
@@ -113,6 +117,7 @@ export default {
       var params = {
         name: this.user.name,
         email: this.user.email,
+        phone_number: this.user.phone_number,
         image: this.image
       };
       console.log(params);

@@ -112,7 +112,8 @@
               <div class="row m-b-200">
                 <div class="col-md-6">
                   <p>
-                    <img :src="user.image" :alt="user.name" width="500" height="281">
+                    <img :src="user.image" :alt="user.name">
+                    <!-- width="500" height="281" -->
                   </p>
                 </div>
                 <div class="col-md-6">
@@ -152,7 +153,7 @@
         <section class="module module-divider-bottom">
           <div class="container">
             <div class="row">
-              <div class="col-md-4"><router-link v-bind:to="'/users/' + user.id + '/edit'">
+              <div class="col-md-4"><router-link v-bind:to="'/users/me/edit'">
                 <div class="icon-box icon-box-left">
                   <div class="icon-box-icon"><span class="icon icon-basic-heart"></span></div>
                   <div class="icon-box-title">

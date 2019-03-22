@@ -21,7 +21,7 @@
                       <!-- Column 1-->
                       <li class="menu-item-has-children mega-menu-col"><router-link to="/users/me">Profile Links</router-link>
                         <ul class="sub-menu">
-                          <li><router-link v-bind:to="'/users/' + user.id + '/edit'">Update Your Info</router-link></li>
+                          <li><router-link v-bind:to="'/users/me/edit'">Update Your Info</router-link></li>
                           <li><router-link to="/goals">Your Goals</router-link></li>
                           <router-link to="/conversations">Your Conversations</router-link>
                           <li><router-link to="/logout">Log Out</router-link></li>

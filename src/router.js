@@ -44,7 +44,7 @@ export default new Router({
       component: UsersShow
     },
     {
-      path: '/users/:id/edit',
+      path: '/users/me/edit',
       name: 'users-edit',
       component: UsersEdit
     },
