@@ -17,11 +17,90 @@
     <section class="module bg-dark bg-gradient" v-else>
       <div class="container">
         <div class="row">
-          <div class="col-md-2">
+          <div class="col-md-12 text-center">
+            <h3 >How are you doing today? Do a self check-in...</h3>
+            <button class="btn btn-circle btn-brand" type="button" data-toggle="modal" data-target="#modal-check-in">Check In</button>
           </div>
         </div>
       </div>
     </section>
+
+
+
+
+          <!-- Login Modal--> 
+    <div class="modal fade" id="modal-check-in">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">You Matter. Let's check in.</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span>&times;</span></button>
+          </div>
+
+          <div class="form-group row">
+            <div class="col-md-8 m-auto">
+              <div class="special-heading">
+                <h4>Are you good and hydrated?</h4>
+              </div>
+              <div class="form-check">
+                <label class="custom-control custom-checkbox">
+                  <input class="custom-control-input" type="checkbox" ><span class="custom-control-indicator"></span><span class="custom-control-description">yep. on my way to 8 glasses.</span>
+                </label>
+                <label class="custom-control custom-checkbox">
+                  <input class="custom-control-input" type="checkbox" ><span class="custom-control-indicator"></span><span class="custom-control-description">not really. chug-a-lug.</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-8 m-auto">
+              <div class="special-heading">
+                <h4>Have you eaten a healthy variety and amount of food today?</h4>
+              </div>
+              <div class="form-check">
+                <label class="custom-control custom-checkbox">
+                  <input class="custom-control-input" type="checkbox" ><span class="custom-control-indicator"></span><span class="custom-control-description">yes. plenty of fruits and vegetables and my favorite proteins.</span>
+                </label>
+                <label class="custom-control custom-checkbox">
+                  <input class="custom-control-input" type="checkbox" ><span class="custom-control-indicator"></span><span class="custom-control-description">not so much. I can do better.</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-8 m-auto">
+              <div class="special-heading">
+                <h4>Have you moved, grooved, or hit the ground running today?</h4>
+              </div>
+              <div class="form-check">
+                <label class="custom-control custom-checkbox">
+                  <input class="custom-control-input" type="checkbox" ><span class="custom-control-indicator"></span><span class="custom-control-description">I put in some exercise today.</span>
+                </label>
+                <label class="custom-control custom-checkbox">
+                  <input class="custom-control-input" type="checkbox" ><span class="custom-control-indicator"></span><span class="custom-control-description">I'll go do that right now - away from tech and screens</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-md-8 m-auto">
+              <div class="special-heading">
+                <h4>Results</h4>
+              </div>
+              <div class="form-check">
+                <p>Whatever your answers. Give yourself a pat on the back for showing up and taking steps to take care of yourself. The world needs all of us. Now go grab another glass of water and a walk outside if you need it. Your partner will be here when you get back. Have a wonderful day.</p>
+              </div>
+            </div>
+          </div>
+
+
+
+          
+
+        </div>
+      </div>
+    </div>  
+    <!-- Login Modal end-->  
       
 
 
