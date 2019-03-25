@@ -58,7 +58,7 @@
                           </div>
                           <div class="post-content">
                             <p>A Conversation with {{conversation.partner.name}}.</p>
-                            <h4>Send a Message</h4>
+                            <h4 class="post-footer">Send a Message</h4>
                           </div>
                         </div>
                       </article>
@@ -151,9 +151,10 @@
 
 
 <style>
-  section.module.p-0.bg-dark.bg-gradient, article div div ul li, ul.post-meta.h5, article div div h4 {
+  section.module.p-0.bg-dark.bg-gradient, article div div ul li, ul.post-meta.h5, h4.post-footer {
     color: #999;
   }
+
 </style>
 
 

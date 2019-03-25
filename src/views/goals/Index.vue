@@ -87,7 +87,7 @@
                           </div>
                           <div class="post-content">
                             <p>{{goal.goal}}.</p>
-                            <h4>Update your Goals</h4>
+                            <h4 class="post-footer">Update your Goals</h4>
                           </div>
                         </div>
                       </article>
@@ -198,6 +198,7 @@
 </template>
 
 <style>
+
 </style>
 
 <script>
