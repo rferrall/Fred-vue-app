@@ -136,6 +136,7 @@ export default {
         .delete("/api/users/" + this.user.id)
         .then(response => {
           console.log("Sorry to see you go.", response.data);
+          localStorage.removeItem("jwt");
           this.$router.push("/");
         });
     },

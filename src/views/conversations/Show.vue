@@ -209,6 +209,7 @@ export default {
         .then(response => {
           console.log(response.data);
           this.conversation.messages.push(response.data);
+          this.newMessageBody = '';
 
         })
         .catch(error => {

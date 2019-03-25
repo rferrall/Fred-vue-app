@@ -21,21 +21,21 @@
                 <h4>Goal Subject</h4>
               </div>
               <div class="col-10">
-                <input class="form-control" type="text" v-model="subject">
+                <input class="form-control" type="text" placeholder="ex: workworkworkworkwork" v-model="subject">
               </div>
             </div>
             <div class="form-group">
               <div class="special-heading">
                 <h4>Describe your goal:</h4>
               </div>
-              <textarea class="form-control" id="exampleTextarea" rows="5" v-model="goal"></textarea>
+              <textarea class="form-control" id="exampleTextarea" rows="5" placeholder="ex: I've been unhappy at my job for awhile and I would like support as start applying and interviewing. Articles, peptalks...anything to help with this brutal process! I'm shooting for 3 applications a day." v-model="goal"></textarea>
             </div>
 
 
             <div class="form-group row">
               <!-- <div class="col-md-8 m-auto"> -->
                 <div class="special-heading">
-                  <h4>End Date:</h4>
+                  <h4>End Date: (somewhere between 1 month and 3 months is optimal)</h4>
                 </div>
                 <div class="col-8">
                   <input class="form-control" type="date" v-model="end_date">
@@ -60,7 +60,7 @@
         <div class="form-group row">
           <div class="col-md-8 m-auto">
             <div class="special-heading">
-              <h4>Active:</h4>
+              <h4>Active:(remember only ONE active goal at a time)</h4>
             </div>
             <div class="form-check">
               <label class="custom-control custom-checkbox">

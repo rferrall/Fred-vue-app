@@ -15,19 +15,19 @@
                 </ul>
                 <div class="form-group">
                   <label>Name:</label> 
-                  <input type="text" class="form-control" placeholder="Fred Rogers or Superman" v-model="name">
+                  <input type="text" class="form-control" placeholder="ex: Fred Rogers or Superman" v-model="name">
                 </div>
                 <div class="form-group">
                   <label>Email:</label>
-                  <input type="email" class="form-control" placeholder="superman@gmail.com" v-model="email">
+                  <input type="email" class="form-control" placeholder="ex: superman@gmail.com" v-model="email">
                 </div>
                 <div class="form-group">
-                  <label>Telephone: (for text notifications that you have a new message - will not be shared or public)</label>
-                    <input class="form-control" type="tel" placeholder="+17635556123" v-model="phone_number">
+                  <label>Telephone: (to receive text notifications that you have a new message - will not be shared or public)</label>
+                    <input class="form-control" type="tel" placeholder="ex: +17635556123" v-model="phone_number">
                 </div>
                 <div class="form-group">
                   <label>Password:</label>
-                  <input type="password" placeholder="**********" class="form-control" v-model="password">
+                  <input type="password" placeholder="ex: **********" class="form-control" v-model="password">
                 </div>
                 <div class="form-group">
                   <label>Password confirmation:</label>
