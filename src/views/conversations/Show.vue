@@ -109,11 +109,14 @@
             </article>
             <!-- Post end-->
 
+
+
+
+            
             <!-- Comments area-->
-            <div class="comments-area">
+           <div class="comments-area">
               <h5 class="comments-title"></h5>
               <div class="comment-list">
-                <!-- Comment-->
                 <div class="comment" v-for="message in conversation.messages">
                   <div class="comment-author" v-if='message.user_id == conversation.recipient.id'>
                       <img :src="conversation.recipient.image" :alt="conversation.recipient.name">
@@ -140,14 +143,17 @@
                     <li class="text-danger" v-for="error in errors">{{ error }}</li>
                   </ul>
                   <div class="form-group col-sm-12">
-                    <textarea class="form-control" rows="8" placeholder="Message" v-model="newMessageBody"></textarea>
+                    <textarea class="form-control" rows="8" placeholder="A quick check in or a longer update can go a long way!" v-model="newMessageBody"></textarea>
                   </div>
                   <div class="form-submit col-sm-12">
                     <input class="btn btn-block btn-lg btn-round btn-brand" type="submit" value="Send">
                   </div>
                 </form>
               </div>
-            </div>
+            </div> 
+
+
+
             <!-- Comments area end-->
           </div>
         </div>
@@ -175,6 +181,7 @@ import axios from 'axios';
 import moment from 'moment';
 
 export default {
+
   data: function() {
     return {
       conversation: {},
@@ -183,8 +190,6 @@ export default {
       sender: {},
       messages: [],
       newMessageBody: "",
-     
-
       
       
     };
