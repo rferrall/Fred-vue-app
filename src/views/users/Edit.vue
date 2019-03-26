@@ -143,7 +143,7 @@ export default {
         name: this.user.name,
         email: this.user.email,
         phone_number: this.user.phone_number,
-        image: this.image
+        image: this.image,
       };
       console.log(params);
       axios

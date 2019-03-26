@@ -19,7 +19,7 @@
                   <div class="mega-menu">
                     <ul class="sub-menu mega-menu-row">
                       <!-- Column 1-->
-                      <li class="menu-item-has-children mega-menu-col"><router-link to="/users/me">Profile Links</router-link>
+                      <li class="menu-item-has-children mega-menu-col">
                         <ul class="sub-menu">
                           <li><router-link v-bind:to="'/users/me/edit'">Update Your Info</router-link></li>
                           <li><router-link to="/goals">Your Goals</router-link></li>
