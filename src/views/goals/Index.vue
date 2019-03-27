@@ -16,17 +16,6 @@
             </div>
           </div>
           </router-link>
-          <div class="col-md-12">
-            <div v-if="$parent.user.active_goal">
-              <h1>
-                Ready to start a conversation about your active goal?
-              </h1>
-             
-                <a v-for="error in errors">{{ error }}</a>
-              
-              <div class="m-b-10"><button class="btn btn-circle btn-brand" v-on:click="createConversation()">Start</button></div><br>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -87,7 +76,7 @@
                           </div>
                           <div class="post-content">
                             <p>{{goal.goal}}.</p>
-                            <h4 class="post-footer">Update your Goals</h4>
+                            <h4 class="post-footer">Update your Goal</h4>
                           </div>
                         </div>
                       </article>
@@ -136,7 +125,30 @@
 
     <!-- Blog end-->
 
-  <!-- Services-->
+
+
+    <section class="module-sm module-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <div v-if="$parent.user.active_goal">
+              <h1>
+                Ready to start a conversation about your active goal?
+              </h1>
+             
+                <a v-for="error in errors">{{ error }}</a>
+              
+              <div class="m-b-10"><button class="btn btn-circle btn-brand" v-on:click="createConversation()">Start</button></div><br>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+  <!-- About Setting Great Goals-->
   <section class="module module-divider-bottom">
     <div class="container">
       <div class="row">
@@ -185,7 +197,7 @@
       </div>
     </div>
   </section>
-  <!-- Services end-->
+  <!-- About Setting Great Goals end-->
 
 
   
@@ -229,7 +241,7 @@ export default {
         .post("/api/conversations/")
         .then(response => {
           console.log("convo created", response.data);
-          this.$router.push("/conversations");
+          this.$router.push("/conversations/" + response.data.id);
         })
         .catch(error => {
           console.log(error.response.data.errors);

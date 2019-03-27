@@ -7,11 +7,12 @@
       <section class="module-page-title bg-light">
         <div class="container">
           <div class="row-page-title">
-            <div class="col-md-12">
+            <div class="col-md-12 text-center">
               <div>
-                <h3> Done with this goal?
-                  <button class="btn btn-circle btn-brand" v-on:click="destroyGoal()">Delete Goal</button>
+                <h3> 
+                  Done with this goal?
                 </h3>
+                <button class="btn btn-circle btn-brand" v-on:click="destroyGoal()">Delete Goal</button>
               </div>
             </div>
           </div>
@@ -26,6 +27,9 @@
            <div class="row m-b-50">
              <div class="col-md-8 m-auto">
                <h2>Edit this Goal</h2>
+               <ul>
+                 <li class="text-danger" v-for="error in errors">{{ error }}</li>
+               </ul>
                <div class="form-group row">
                  <div class="special-heading">
                    <h4>Goal Subject</h4>

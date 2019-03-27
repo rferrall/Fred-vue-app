@@ -5,9 +5,9 @@
     <header class="header header-center undefined">
       <div class="container-fluid">
         <!-- Logos-->
-          <div class="inner-header"><a class="inner-brand" href="/">
-              <!-- Or simple text-->
-              Fred</a></div>
+          <div class="inner-header"><a class="inner-brand" href=""> <img class="brand-dark" src="/assets/images/fred-logo.png" width="77px" alt="">
+              
+              </a></div>
         <!-- Navigation-->
         <div class="inner-navigation collapse">
           <div class="inner-navigation-inline">
